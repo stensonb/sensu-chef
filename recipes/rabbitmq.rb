@@ -30,7 +30,7 @@ if node.sensu.use_ssl
     recursive true
   end
 
-  ssl = Sensu::Helpers.data_bag_item("ssl")
+  ssl = Sensu::Helpers.data_bag_item(node.sensu.ssl.databag.item.name)
 
   %w[
     cacert

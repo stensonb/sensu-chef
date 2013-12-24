@@ -39,11 +39,11 @@ vagrant ssh
 ### SSL configuration
 
 Running Sensu with SSL is recommended; this cookbook uses a data bag
-`sensu`, with an item `ssl`, containing the SSL certificates required.
-Sensu data bag items may be encrypted. This cookbook comes with a tool
-to generate the certificates and data bag item. If the integrity of
-the certificates is ever compromised, you must regenerate and redeploy
-them.
+`sensu` (by default), with an item `ssl` (by default), containing the
+SSL certificates required.  Sensu data bag items may be encrypted. This
+cookbook comes with a tool to generate the certificates and data bag
+item. If the integrity of the certificates is ever compromised, you
+must regenerate and redeploy them.
 
 ```
 cd examples/ssl

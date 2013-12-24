@@ -52,7 +52,7 @@ if node.sensu.use_ssl
 
   directory File.join(node.sensu.directory, "ssl")
 
-  ssl = Sensu::Helpers.data_bag_item("ssl")
+  ssl = Sensu::Helpers.data_bag_item(node.sensu.ssl.databag.item.name)
 
   file node.sensu.rabbitmq.ssl.cert_chain_file do
     content ssl["client"]["cert"]
